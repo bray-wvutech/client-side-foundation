@@ -1,0 +1,107 @@
+
+/* 
+do a greenish background for form
+with same green for button backgrounds and white rounded borders
+do button text in all caps
+hoverig over button should do something
+
+do a red background for error
+*/
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+button {
+    background: #00a088;
+    color: white;
+    border: solid 2px white;
+    border-radius: 20px;
+    padding: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+}
+
+button:hover {
+    border: solid 2px #00a088;
+    background: white;
+    color: #00a088;
+}
+
+input[type="submit"] {
+    background: #00a088;
+    color: white;
+    border: solid 2px white;
+    border-radius: 20px;
+    padding: 10px;
+    text-transform: uppercase;
+}
+
+input[type="submit"]:hover {
+    border: solid 2px #00a088;
+    background: white;
+    color: #00a088;
+}
+
+input[type="button"] {
+    background: #00a088;
+    color: white;
+    border: solid 2px white;
+    border-radius: 20px;
+    padding: 10px;
+    text-transform: uppercase;
+}
+
+input[type="button"]:hover {
+    border: solid 2px #00a088;
+    background: white;
+    color: #00a088;
+}
+
+input[type="text"] {
+    border: solid 2px white;
+    border-radius: 20px;
+    padding: 10px;
+}
+
+#mainContainer {
+    width: fit-content;
+    margin: auto auto;
+}
+
+#messageContainer {
+    display: flex;
+    margin-top: 20px;
+    width: 910px;
+}
+
+#messageDiv {
+    border-radius: 20px;
+    background: lightcoral;
+    flex: 1;
+    margin-right: 20px;
+    padding: 20px;
+    color: white;
+    font-weight: bold;
+}
+
+#formContainer {
+    width: 770px;
+    border-radius: 20px;
+    background: #00a088;
+    padding-left: 20px;
+    padding-right: 20xp;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    margin-top: 20px;
+}
+
+#numberForm {
+    width: fit-content;
+    margin-right: 5px;
+    float: left;
+}
+
+#outsideFormDiv {
+    float: right;
+}

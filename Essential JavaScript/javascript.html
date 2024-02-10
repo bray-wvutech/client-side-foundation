@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script>
+    // this is a JavaScript comment
+
+		// it is much better to put your JavaScript in its own file
+		// and specify that file with src="filename.js" in the script tag
+		// than to put it all inline like we are doing here
+
+    /* this starts a multiline comment
+    this ends the multiline comment */
+
+    // let variables have scope within current block
+    let x = 1;
+
+    // var variables have scope within current function
+    var y = 2;
+
+    // a constant
+    // you should use let and const instead of var to avoid scope pitfalls
+    const z = 3;
+
+    // this is a function with a parameter
+    function foo(str)	{
+      // alert pops up a message box
+      alert(str);
+    }
+
+    // this is a function that returns a result
+    function multiply(n1, n2)	{
+      return n1 * n2;
+    }
+
+    // pop up message saying "1"
+    foo(x);
+
+    // because JavaScript is typeless
+    // we can all of a sudden make x a string
+    // WATCH OUT FOR THIS KIND OF THING!
+    x = "hello world";
+    foo(x);
+
+    // double quotes and single quotes are interchangeable
+    // other than how they escape the other
+    // but you should choose one and be consistent
+    foo('this is a test');
+    foo(multiply(y, z));
+
+    function changeHeading(str)	{
+      // this uses the DOM to get a part of your webpage as an object
+      // and changes what it displays
+      // you reference the DOM by starting with the built in document object
+      // there is also a built in window object
+      document.querySelector("#heading1").innerHTML = str;
+    }
+  </script>
+</head>
+
+
+<body onload="changeHeading('changed from body onload')">
+	<h1 id="heading1">Original h1 text</h1>
+	<h2 id="heading2">Original h2 text</h2>
+	<button onclick="changeHeading('changed from inline button')">
+		Inline event handler
+	</button>
+  <input type="text" id="textbox" placeholder="type here"/>
+	<button id="button1">Attached event handlers</button>
+
+  <script>
+    // we can also put script tags in the body
+    // we may NEED to do it this way to do things like attach event handlers
+    // because the html elements have to exist before we can interact with them
+
+    function onButtonClick() {
+      // we can get values from controls
+      document.getElementById("heading1").innerHTML = document.getElementById("textbox").value;
+    }
+
+    // this attaches an event handler to one of our buttons
+    // notice we are using a different method to get our HTML element
+    // getElementById only works with HTML tag id whereas querySelector
+    // works with other CSS selectors
+    const button = document.getElementById("button1xxx");
+    if (button != null)	{
+      // attachEvent and addEventListener can have browser issues
+      // so it is wise to check if they are available
+      // addEventListener is newer
+      if (falsebutton.addEventListener) {
+        // note the way the function is passed in
+        // this means you can't pass parameters
+        button.addEventListener("click", onButtonClick);
+        // you can define the function anonymously
+        button.addEventListener("click", function() {
+          document.getElementById("heading2").innerHTML = "changed from addEventListener";
+        });
+      }
+      else if (button.attachEvent) {
+        // NOTE attachEvent uses on + event 
+        button.attachEvent("onclick", onButtonClick);            
+        // you can also use an arrow function
+        button.attachEvent("onclick", () => {
+          document.getElementById("heading2").innerHTML = "changed from attachEvent";
+        });
+      }
+      else {
+        // you can attach the event listener by assignment
+        // but this only allows for one handler and overwrites any existing ones
+        button.onclick = function() {
+          document.getElementById("heading2").innerHTML = "changed from onclick =";
+        }
+      }	
+    } // if (button != null)
+    else {
+          // also we can log stuff to the console
+          // which appears under developer tools
+          console.log("button was null");
+    } // if (button != null)
+  </script>
+</body>
+</html>

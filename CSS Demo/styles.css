@@ -1,0 +1,78 @@
+@import url(styles2.css);
+
+.border-red {
+    border: solid 5px #ff0000;
+}
+
+.border-green {
+    border: solid 5px green;
+}
+
+.border-yellow {
+    border: solid 5px yellow;
+}
+
+.border-blue {
+    border: solid 5px blue;
+}
+
+.center {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.fifty-width {
+    width: 50%;
+}
+
+#mainDiv {
+    border: solid 10px teal;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20%;
+    margin-bottom: 20px;
+/*    overflow: hidden;*/
+}
+
+.padding-20 {
+    padding: 20px;
+}
+
+.margin-top-20 {
+    margin-top: 20px;
+}
+
+.background-teal {
+    border: solid 5px black;
+    background-color: teal;
+    color: white;
+    border-radius: 20px;
+    align-self: right;
+}
+
+
+.float-left {
+    border: solid 5px red;
+    width: 50%;
+    float: left;
+    flex: 1;
+}
+
+.float-right {
+    border: solid 5px blue;
+    width: 50%;
+    float: right;
+}
+
+/*
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px;
+}
+
+.grid-2 {
+    grid-column: span 2;
+}
+*/

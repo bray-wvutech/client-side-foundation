@@ -1,0 +1,26 @@
+
+.main-container {
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    padding-top: 20px;
+}
+
+.content-container {
+    margin-bottom: 20px;
+    padding: 20px;
+}
+
+#contentDiv1 {
+    border: solid 5px red;
+}
+
+#contentDiv2 {
+    border: solid 5px green;
+}
+
+#contentDiv3 {
+    border: solid 5px blue;
+}

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>JavaScript Demo</title>
+    </head>
+
+    <body>
+        <!-- added this div -->
+        <div id="mainContainer">
+            <div id="messageContainer">
+                <div id="messageDiv">
+                    Please enter a number between 1 and 10.
+                </div>
+                <div id="buttonDiv">
+                    <button id="messageButton">Show/Hide</button>
+                </div>
+            </div>
+
+            <!-- added this div -->
+            <div id="formContainer">
+                <form id="numberForm" method="get" action="success.html">
+                    <input id="formTextBox" type="text" placeholder="Enter 1-10"/>
+                    
+                    <input type="submit"/>
+
+                    <input id="inputButton" type="button" value="form input button"/>
+
+                    <button>form button</button>
+                </form>
+                <button id="programSubmitButton">outside form button</button>
+            </div> <!-- formContainer -->
+        </div> <!-- mainContainer -->
+        <script src="demo.js"></script>
+    </body>
+</html>
